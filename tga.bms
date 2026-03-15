@@ -1,0 +1,12 @@
+idstring "TGZ\0"
+comtype lzss
+get SIZE asize
+math SIZE -= 16
+get UNC_SIZE long
+get WIDTH long
+get HEIGHT long
+savepos OFFSET
+get NAME filename
+string NAME += ".dec"
+clog NAME OFFSET SIZE UNC_SIZE
+ 
